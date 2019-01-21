@@ -24,5 +24,36 @@ namespace SimpleGUI
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string temp;
+
+            temp = First.Text;
+            First.Text = Second.Text;
+            Second.Text = Third.Text;
+            Third.Text = Fourth.Text;
+            Fourth.Text = temp;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            First.Clear();
+            Second.Clear();
+            Third.Clear();
+            Fourth.Clear();
+            MessageBox.Show("The data has been cleared!", "Warning!", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            string temp;
+
+            temp = Fourth.Text;
+            Fourth.Text = Third.Text;
+            Third.Text = Second.Text;
+            Second.Text = First.Text;
+            First.Text = temp;
+        }
     }
 }
